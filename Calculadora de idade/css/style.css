@@ -1,4 +1,41 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(0, 170, 255);
+    background-color: rgb(110, 223, 211);
+    text-align: center;
+}
+
+
+section,
+article {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+input,
+select {
+    border-radius: 3px;
+    width: 100px;
+}
+
+button {
+    background-color: rgb(199, 246, 104);
+    font-size: 20px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: rgb(172, 209, 104);
+}
+
+input,
+button,
+select {
+    color: rgb(0, 0, 0);
+    border-color: rgba(240, 248, 255, 0);
+}
+
+p {
+    font-size: 20px;
 }

@@ -50,6 +50,12 @@ function calcular() {
 
                     let proximaDataAniversario = new Date(proximoAno, proximoMes - 1, proximoDia);
 
+                    // Calcula a diferença em milissegundos entre a data atual e a próxima data de aniversário
+                    let diferencaMillis = proximaDataAniversario - dataAtual;
+
+                    // Converte a diferença de milissegundos para dias
+                    let diasFaltando = Math.ceil(diferencaMillis / (1000 * 60 * 60 * 24));
+
                     let calculo_dias_vividos = (calculo_ano * 365) + (calculo_mes * 30) + calculo_dia;
                     let calculo_horas_vividas = calculo_dias_vividos * 24;
                     let calculo_minutos_vividos = calculo_horas_vividas * 60;
@@ -60,18 +66,21 @@ function calcular() {
                     let info_horas = document.createElement("p");
                     let info_minuto = document.createElement("p");
                     let info_proxima_data_aniversario = document.createElement("p");
+                    let info_dias_faltando = document.createElement("p");
 
                     info_idade.textContent = calculo_ano + " anos, " + calculo_mes + " meses, " + calculo_dia + " dias";
                     info_dias.textContent = "Dias vividos: " + calculo_dias_vividos;
                     info_horas.textContent = "Horas vividas: " + calculo_horas_vividas;
                     info_minuto.textContent = "Minutos vividos: " + calculo_minutos_vividos;
                     info_proxima_data_aniversario.textContent = "Próxima data de aniversário: " + proximaDataAniversario.toLocaleDateString();
+                    info_dias_faltando.textContent = "Dias faltando para o próximo aniversário: " + diasFaltando;
 
                     divResultado.appendChild(info_idade);
                     divResultado.appendChild(info_dias);
                     divResultado.appendChild(info_horas);
                     divResultado.appendChild(info_minuto);
                     divResultado.appendChild(info_proxima_data_aniversario);
+                    divResultado.appendChild(info_dias_faltando);
                 }
             }
         }

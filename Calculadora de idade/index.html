@@ -9,11 +9,13 @@
 </head>
 
 <body>
-    <header>Calculadora de Idade</header>
+    <header>
+        <h3>Calculadora de Idade</h3>
+    </header>
     <section>
         <form action="">
             <select name="dia" id="dia">
-                <option value="" disabled selected>Selecione o dia</option>
+                <option value="" disabled selected>Dia</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -47,7 +49,7 @@
                 <option value="31">31</option>
             </select>
             <select id="mes">
-                <option value="" disabled selected>Selecione o mês</option>
+                <option value="" disabled selected>Mês</option>
                 <option value="01 ">Janeiro</option>
                 <option value="02">Fevereiro</option>
                 <option value="03">Março</option>
@@ -62,11 +64,11 @@
                 <option value="12">Dezembro</option>
             </select>
             <input type="text" id="ano">
-            <button type="button" id="calcular">Calcular</button>
+
         </form>
     </section>
-
     <article>
+        <button type="button" id="calcular">Calcular</button>
     </article>
     <script src="js/script.js"></script>
 </body>
